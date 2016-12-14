@@ -1,10 +1,13 @@
 {
-  "name": "TECHANAGE",
+  "name": "MyShop",
   "version": "1.0.0",
   "description": "Manage your project in a minimal way",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build-ubuntu": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/image/icon.png --prune=true --out=release-builds",
+    "build-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/image/icon.png.icns --prune=true --out=release-builds",
+    "build-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --icon=assets/image/icon.png.ico --prune=true --out=release-builds --version-string.CompanyName='CE' --version-string.FileDescription='My Shop' --version-string.ProductName='My Shop'"
   },
   "repository": "https://github.com/vineetshopo/techanage",
   "keywords": [
@@ -15,6 +18,16 @@
   ],
   "author": "Vineet",
   "devDependencies": {
-    "electron": "^1.4.1"
-  }
+    "electron": "^1.4.1",
+    "electron-packager": "^8.4.0",
+    "electron-compilers": "^3.1.6",
+    "electron-devtools-installer": "^2.0.1",
+    "npm-run-all": "^3.1.0",
+    "recursive-readdir": "^2.0.0"
+  },
+  "dependencies": {
+   "electron-compile": "^3.3.5",
+   "electron-is-dev": "^0.1.2",
+   "electron-reload": "^1.0.2"
+ }
 }

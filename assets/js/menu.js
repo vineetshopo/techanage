@@ -1,22 +1,5 @@
-const {remote} = require('electron')
-const {Menu, MenuItem} = remote
-
-// Build our new menu
-// const menu = new Menu()
-// menu.append(new MenuItem({
-//   label: 'Delete',
-//   click: function() {
-//     // Trigger an alert when menu item is clicked
-//     alert('Deleted')
-//   }
-// }))
-// menu.append(new MenuItem({
-//   label: 'More Info...',
-//   click: function() {
-//     // Trigger an alert when menu item is clicked
-//     alert('Here is more information')
-//   }
-// }))
+const {remote} = require('electron');
+const {Menu, MenuItem, webFrame} = remote;
 
 const template = [
   {
@@ -96,7 +79,7 @@ const template = [
     submenu: [
       {
         label: 'Learn More',
-        click () { require('electron').shell.openExternal('https://www.shopo.in') }
+        click () { require('electron').shell.openItem('https://www.shopo.in') }
       }
     ]
   }
@@ -180,12 +163,12 @@ if (process.platform === 'darwin') {
 }
 
 const menu = Menu.buildFromTemplate(template);
-Menu.setApplicationMenu(menu)
+Menu.setApplicationMenu(menu);
 
 // Add the listener
 document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('contextmenu', (e) => {
-    e.preventDefault()
-    menu.popup(remote.getCurrentWindow())
-  }, false)
-})
+    e.preventDefault();
+    menu.popup(remote.getCurrentWindow());
+  }, false);
+});

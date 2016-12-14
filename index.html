@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Techanage</title>
+    <title>My Shop</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./assets/css/photon.min.css">
@@ -13,13 +13,14 @@
     <div class="window">
 
       <!-- .toolbar-header sits at the top of your app -->
-      <header class="toolbar toolbar-header">
+      <!-- <header class="toolbar toolbar-header">
         <h1 class="title">Techanage</h1>
-      </header>
+      </header> -->
 
       <!-- Your app's content goes inside .window-content -->
       <div class="window-content">
-        <div class="pane-group">
+        <webview id="foo" src="http://myshop.shopo.in/" style="display:inline-flex; width:100vw; height:100%"></webview>
+        <!-- <div class="pane-group">
           <div class="pane pane-sm sidebar">
             <nav class="nav-group">
               <h5 class="nav-group-title">Favorites</h5>
@@ -55,6 +56,7 @@
           </div>
 
           <div class="pane">
+
             <table class="table-striped">
               <thead>
                 <tr>
@@ -176,7 +178,7 @@
               </tbody>
             </table>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </body>
