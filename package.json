@@ -1,0 +1,20 @@
+{
+  "name": "TECHANAGE",
+  "version": "1.0.0",
+  "description": "Manage your project in a minimal way",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/vineetshopo/techanage",
+  "keywords": [
+    "techanage",
+    "shopo",
+    "project",
+    "docs"
+  ],
+  "author": "Vineet",
+  "devDependencies": {
+    "electron": "^1.4.1"
+  }
+}
