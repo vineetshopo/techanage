@@ -7,7 +7,9 @@
     "start": "electron .",
     "build-ubuntu": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/image/icon.png --prune=true --out=release-builds",
     "build-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/image/icon.png.icns --prune=true --out=release-builds",
-    "build-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --icon=assets/image/icon.png.ico --prune=true --out=release-builds --version-string.CompanyName='CE' --version-string.FileDescription='My Shop' --version-string.ProductName='My Shop'"
+    "build-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --icon=assets/image/icon.png.ico --prune=true --out=release-builds --version-string.CompanyName='CE' --version-string.FileDescription='My Shop' --version-string.ProductName='My Shop'",
+    "build-dmg": "appdmg mac-dmg.json ./installer/MyShop.dmg",
+    "build-deb": "electron-installer-debian --src ./release-builds/MyShop-linux-x64/ --dest . --arch amd64"
   },
   "repository": "https://github.com/vineetshopo/techanage",
   "keywords": [
@@ -18,16 +20,18 @@
   ],
   "author": "Vineet",
   "devDependencies": {
+    "appdmg": "^0.4.5",
     "electron": "^1.4.1",
-    "electron-packager": "^8.4.0",
     "electron-compilers": "^3.1.6",
     "electron-devtools-installer": "^2.0.1",
+    "electron-installer-debian": "^0.4.0",
+    "electron-packager": "^8.4.0",
     "npm-run-all": "^3.1.0",
     "recursive-readdir": "^2.0.0"
   },
   "dependencies": {
-   "electron-compile": "^3.3.5",
-   "electron-is-dev": "^0.1.2",
-   "electron-reload": "^1.0.2"
- }
+    "electron-compile": "^3.3.5",
+    "electron-is-dev": "^0.1.2",
+    "electron-reload": "^1.0.2"
+  }
 }
