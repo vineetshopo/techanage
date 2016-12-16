@@ -9,7 +9,7 @@
     "build-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/image/icon.png.icns --prune=true --out=release-builds",
     "build-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --icon=assets/image/icon.png.ico --prune=true --out=release-builds --version-string.CompanyName='CE' --version-string.FileDescription='My Shop' --version-string.ProductName='My Shop'",
     "build-dmg": "appdmg mac-dmg.json ./installer/MyShop.dmg",
-    "build-deb": "electron-installer-debian --src ./release-builds/MyShop-linux-x64/ --dest . --arch amd64"
+    "build-deb": "electron-installer-debian --src release-builds/MyShop-linux-x64/ --dest . --arch amd64"
   },
   "repository": "https://github.com/vineetshopo/techanage",
   "keywords": [
